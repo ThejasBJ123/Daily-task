@@ -1,0 +1,429 @@
+encapsulation:
+
+Employee Salary
+
+Create an Employee class.
+
+employee = Employee("Priya", 30000)
+
+Requirements:
+
+name → public
+__salary → private
+Create get_salary()
+Create set_salary(new_salary)
+Salary cannot be set to a negative value.
+
+example:
+employee.set_salary(35000)
+print(employee.get_salary())
+
+Expected:
+35000
+If:
+employee.set_salary(-5000)
+Output:
+Invalid salary
+
+inheritance:
+Person → Student 🎓
+
+Create a parent class Person:
+
+name
+age
+display_person()
+
+Create a child class Student:
+
+student_id
+course
+display_student()
+
+Task: Display the complete student information using inheritance.
+
+heirarchial inheritance:
+
+Person → Doctor / Patient 
+
+Create:
+
+        Person
+       /      \
+   Doctor    Patient
+Person
+name
+age
+display_info()
+Doctor
+specialization
+diagnose()
+Patient
+disease
+treatment()
+
+Task: Create objects for both Doctor and Patient.
+
+Concept: Hierarchical inheritance.
+
+Multilevel inheritance
+
+Employee → Developer → SeniorDeveloper 🚀
+
+Create multilevel inheritance:
+
+Employee
+   ↓
+Developer
+   ↓
+SeniorDeveloper
+Employee
+name
+employee_id
+salary
+Developer
+programming_language
+write_code()
+SeniorDeveloper
+experience
+review_code()
+
+Task: Create a SeniorDeveloper object and access properties/methods from all three classes.
+
+Concept: Multilevel inheritance.
+
+
+Multiple inheritance.
+
+7. Employee + Skills → Developer
+
+Create two parent classes:
+
+Employee       Skills
+     \          /
+      \        /
+       Developer
+Employee
+name
+employee_id
+display_employee()
+Skills
+skill
+display_skill()
+Developer
+project
+work()
+
+Task: Create a Developer object and access methods from both parent classes.
+
+Concept: Multiple inheritance.
+
+
+8. E-Commerce Product → Electronics / Clothing 🛒
+
+Create:
+
+             Product
+            /       \
+     Electronics   Clothing
+Product
+product_name
+price
+display_product()
+Electronics
+warranty
+display_warranty()
+Clothing
+size
+display_size()
+
+Task: Create objects for an electronic product and clothing product.
+
+ Add different methods specific to each category.
+
+9. Method Overriding — Employee Roles
+
+Create:
+class Employee:
+    def work(self):
+        print("Employee is working")
+Create:
+Developer
+Tester
+Manager
+
+Each child class should override work().
+
+Expected:
+
+Developer → Writing code
+Tester → Testing application
+Manager → Managing team
+
+Task: Create objects for all three classes and call work().
+
+Concept: Inheritance + Method Overriding.
+
+ 10. KGS Software Company — Complete Task
+
+Build a small employee management system.
+
+Parent class
+Employee
+
+Properties:
+
+name
+employee_id
+salary
+
+Methods:
+
+display_details()
+work()
+Child classes
+        Employee
+       /    |     \
+ Developer Tester  HR
+Developer
+programming_language
+project
+Override:
+work()
+Output:
+Arun is developing the Employee Portal using Python
+Tester
+Additional:
+testing_tool
+Output:
+Priya is testing the Employee Portal using Selenium
+HR
+Additional:
+department
+Output:Meena is managing the HR department
+
+Make the use of thes concepts:
+
+__init__()
+super()
+Method overriding
+Parent and child attributes
+Three child classes
+
+This final task is good for  understand why inheritance is useful in an actual software-company project, rather than treating it as just a syntax exercise.
+
+
+
+Polymorphism:
+. Food Ordering System 
+Create:
+Pizza
+Burger
+Biryani
+Each class should have:
+prepare()
+Expected:
+Pizza → Preparing pizza
+Burger → Preparing burger
+Biryani → Preparing biryani
+Create a function:
+def order_food(food):
+    food.prepare()
+Test it with all three objects.
+
+
+Abstraction
+Food Ordering 
+
+Create an abstract class:
+
+Food
+
+Abstract methods:
+prepare()
+serve()
+
+Create:
+Pizza
+Burger
+Biryani
+
+Each class should provide its own implementation.
+Example:
+Pizza → Preparing pizza
+Burger → Preparing burger
+Biryani → Preparing biryani
+
+Notification System 📱
+
+Create an abstract class:
+
+Notification
+
+Abstract method:
+
+send(message)
+
+Create:
+
+EmailNotification
+SMSNotification
+WhatsAppNotification
+
+Each child class should implement send().
+
+Example:
+
+Email → Sending email: "Your order is confirmed"
+SMS → Sending SMS: "Your order is confirmed"
+WhatsApp → Sending WhatsApp message: "Your order is confirmed"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1. Employee Salary Increment 
+
+You have a list of employee salaries:
+
+salaries = [18000, 22000, 25000, 30000, 35000]
+
+Task:
+Give every employee a ₹3,000 increment using list comprehension.
+
+Expected output:
+
+[21000, 25000, 28000, 33000, 38000]
+
+
+
+2. Even Employee IDs 
+
+An organization has employee IDs:
+
+employee_ids = [101, 102, 103, 104, 105, 106, 107, 108]
+
+Task:
+Create a new list containing only the even employee IDs.
+
+Expected output:
+
+[102, 104, 106, 108]
+
+Concept: List comprehension + if
+
+
+3. Student Pass/Fail Status 🎓
+
+You have student marks:
+
+marks = [85, 42, 76, 35, 91, 28, 67]
+
+Task:
+Create a list where:
+
+Marks ≥ 40 → "Pass"
+Marks < 40 → "Fail"
+
+Expected output:
+
+['Pass', 'Pass', 'Pass', 'Fail', 'Pass', 'Fail', 'Pass']
+
+Concept: List comprehension + if-else
+
+
+4. Product Price Discount 🛒
+
+An e-commerce application has these product prices:
+
+prices = [1000, 2500, 5000, 7500, 10000]
+
+Task:
+Apply a 10% discount to every product using list comprehension.
+
+Expected output:
+
+[900.0, 2250.0, 4500.0, 6750.0, 9000.0]
+
+5. Filter High-Salary Employees 👨‍💻
+
+A company wants to identify employees earning more than ₹30,000.
+
+salaries = [18000, 32000, 25000, 45000, 28000, 55000, 30000]
+
+Task:
+Create a list containing salaries greater than ₹30,000.
+
+Expected output:
+
+[32000, 45000, 55000]
+
+6. Convert Names to Uppercase 🧑‍💼
+
+An HR system stores employee names:
+
+employees = ["arun", "priya", "karthik", "meena", "rahul"]
+
+Task:
+Convert all employee names to uppercase using list comprehension.
+
+Expected output:
+
+['ARUN', 'PRIYA', 'KARTHIK', 'MEENA', 'RAHUL']
+
+Concept: List comprehension + string methods
+
+
+7. Generate Login Usernames 🔐
+
+A company has employee names:
+
+names = ["Arun", "Priya", "Karthik", "Meena"]
+
+Task:
+Generate usernames by converting each name to lowercase and adding @kgs.com.
+
+Expected output:
+
+['arun@kgs.com', 'priya@kgs.com', 'karthik@kgs.com', 'meena@kgs.com']
+
+Hint:
+
+name.lower()
+
+
+8)
+
+employees = [
+    ("Arun", 25000),
+    ("Priya", 45000),
+    ("Karthik", 28000),
+    ("Meena", 55000),
+    ("Rahul", 32000)
+]
+
+Task: Create a list containing the names of employees whose salary is above ₹30,000.
+
+Expected output:
+
+['Priya', 'Meena', 'Rahul']
