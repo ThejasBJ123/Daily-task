@@ -1,3 +1,4 @@
+
 encapsulation:
 
 Employee Salary
@@ -25,6 +26,9 @@ employee.set_salary(-5000)
 Output:
 Invalid salary
 
+
+
+
 inheritance:
 Person → Student 🎓
 
@@ -41,6 +45,8 @@ course
 display_student()
 
 Task: Display the complete student information using inheritance.
+
+
 
 heirarchial inheritance:
 
